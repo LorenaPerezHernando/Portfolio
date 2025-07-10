@@ -1,60 +1,166 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Mí</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
   <style>
     body {
-      background: linear-gradient(120deg, #1c1b29, #302c40);
+      background: linear-gradient(to right, #1c1c2b, #12121c);
+      color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
-      color: #f2f2f2;
-      padding: 3rem 1rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
     }
 
-    .text {
-      max-width: 500px;
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffcc;
+    }
+
+    header h2 {
+      font-size: 1.3rem;
+      color: #ccc;
+      margin-top: 1rem;
+      font-weight: normal;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
+      color: #00ffcc;
+      border-bottom: 2px solid #00ffcc;
+      padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    img {
-      max-width: 300px;
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .button-back {
+      display: inline-block;
+      background-color: #00ffcc;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 2rem;
+    }
+
+    .highlight {
+      color: #00ffcc;
+    }
+
+    .formacion-title {
+      background-color: #ff66b2;
+      display: inline-block;
+      padding: 0.3rem 1rem;
       border-radius: 10px;
-      border: 3px solid #ff79c6;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
-    .back {
-      display: block;
-      margin-top: 2rem;
-      font-size: 1rem;
-      text-align: center;
-      color: #ff79c6;
-      text-decoration: underline;
-      width: 100%;
+    .formacion-entry {
+      margin-bottom: 1.5rem;
     }
+
+    .formacion-entry strong {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .formacion-entry p {
+      margin: 0;
+      color: #ccc;
+    }
+
   </style>
 </head>
 <body>
-  <div class="text">
-    <h1>Sobre Mí</h1>
-    <h2>Creo mundos mágicos llenos de emoción, decisiones y criaturas que susurran historias al jugador.</h2>
+  <header>
+    <h1>I create magical worlds filled with emotion, choices, and creatures that whisper stories to the player</h1>
+    <h2>Passionate about game design and development, with technical training in animation, interactive environments, and specialized Unity programming</h2>
+  </header>
+
+  <div class="content">
+    <section>
+      <h1>Tools and Technologies</h1>
+      <ul>
+        <li><span class="highlight">Engine:</span> Unity</li>
+        <li><span class="highlight">Language:</span> C#</li>
+        <li><span class="highlight">3D Design:</span> Blender</li>
+        <li><span class="highlight">Game Design:</span> Mechanics, UI, interactive narrative</li>
+        <li><span class="highlight">Programming:</span> See in "Featured Projects"</li>
+        <li><span class="highlight">Virtual / Augmented Reality:</span> Initial projects in VR and AR</li>
+        <li><span class="highlight">Languages:</span> 
+          Spanish: Native / English: Intermediate (B1-B2) / French: Basic (A1-A2)
+        </li>
+        <li><span class="highlight">Skills:</span> Teamwork, communication, organization</li>
+        <li><span class="highlight">Problem Solving:</span> Technical and creative challenges</li>
+        <li><span class="highlight">Adaptability:</span> Agile tools and methodologies</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Education</h1>
+      <div class="formacion-entry">
+        <div class="formacion-title">SPECIALIZATION IN GAME DEVELOPMENT WITH UNITY (VR, AR, MR)</div>
+        <strong>Escuela MUSH / 2023–2025</strong>
+        <p>Full development of 2D/3D games. Programming in C# with Unity.</p>
+      </div>
+
+      <div class="formacion-entry">
+        <div class="formacion-title">GAME PROGRAMMING, 3D DESIGN AND VIRTUAL REALITY</div>
+        <strong>ADECCO / 2023</strong>
+        <p>Interactive experience design and introduction to XR tools.</p>
+      </div>
+
+      <div class="formacion-entry">
+        <div class="formacion-title">ADVANCED DIPLOMA IN ANIMATION, GAMES AND INTERACTIVE ENVIRONMENTS</div>
+        <strong>CENTRO CCC / 2021–2022</strong>
+      </div>
+
+      <div class="formacion-entry">
+        <div class="formacion-title">GAME DEVELOPMENT WITH UNITY (VR, AR, MR)</div>
+        <strong>EDX, NASCAR / 2020–2021</strong>
+        <p>Game design and development in Unity 3D with C#, focused on VR, AR, and MR.</p>
+      </div>
+
+      <div class="formacion-entry">
+        <div class="formacion-title">DIGITAL DRAWING & GRAPHIC TECHNIQUES</div>
+        <strong>21 DRAW / 2023–2024</strong>
+        <p>Character design and illustration using Photoshop and Krita.</p>
+      </div>
+
+      <div class="formacion-entry">
+        <div class="formacion-title">BLENDER 3D AND UNREAL ENGINE - MODELING & LEVEL DESIGN</div>
+        <strong>CADA / 2024–2025</strong>
+        <p>3D asset modeling, sculpting, and texturing. Level and environment design in Unreal Engine.</p>
+      </div>
+    </section>
+
+    <a class="button-back" href="index.html">⬅ Back to main page</a>
   </div>
-  <img src="https://source.unsplash.com/400x400/?game-dev" alt="Foto desarrolladora">
-  <a class="back" href="index.html">⬅ Volver a la página principal</a>
 </body>
 </html>
