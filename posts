@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorena's Game World</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #1c1c2b, #12121c);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ffcc;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    nav a {
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #00ccb3;
+    }
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+    .game-panel {
+      background-color: #1f1f2e;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,255,204,0.1);
+    }
+
+    .game-panel h2 {
+      margin-bottom: 0.5rem;
+      color: #00ffcc;
+    }
+
+    .game-panel p {
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .game-panel img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .game-panel a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #00ffcc;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-box {
+  background-color: #f0f0f0;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+.footer-box a img {
+  transition: transform 0.2s ease;
+}
+.footer-box a:hover img {
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Game Dev World</h1>    
+    <nav>
+      <a href="#juegos">All My Games</a>
+      <a href="destacado1.html">Posts</a>
+      <a href="sobremi.html">About Me</a>
+    </nav>
+    <h2>The portal is open. Which world will you choose?</h2>
+  </header>
+
+  <section id="posts">
+    <div class="game-panel">
+      <h2> Data KPI  </h2>
+      <p>Case Studies: Data KPI (Key Performance Indicators)</p>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src=https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/main/posterPosterMagic.png" alt="Magic Game" style="max-width: 50%; border-radius: 10px;"/>
+      <a href="dataKPI.html">DATA KPI</a>
+    </div>
+   </div>
+
+    <div class="game-panel">
+      <h2>Planet Gell Be </h2>
+      <p>Where science and adventure collide.</p>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/main/poster_Planet_Gell_Be.png" alt="Planet Gell Be Game" style="max-width: 50%; border-radius: 10px;"/>
+      <a href="https://lorenaperez.itch.io/planet-gell-be" target="_blank">PLAY</a>
+    </div>
+    </div>
+
+    <div class="game-panel">
+      <h2>Muk Back Home</h2>
+      <p>Guide Muk safely back to his family.</p>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+  <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/main/poster%20Muk%20Back%20Home.png" alt="Muk Game" style="max-width: 50%; border-radius: 10px;"/>
+  <a href="https://lorenaperez.itch.io/muk-back-home-online" target="_blank">PLAY</a>
+</div>
+    </div>
+
+    <div class="game-panel">
+      <h2>Duck Against IA</h2>
+      <p>Can you beat AI in a race?</p>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+  <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/main/Captura%20de%20pantalla%202025-07-10%20180109.png" alt="Duck against IA Game" style="max-width: 50%; border-radius: 10px;"/>
+  <a href="https://lorenaperez.itch.io/duck-against-ia" target="_blank">PLAY</a>
+</div>
+    </div>
+
+  </section>
+
+ <footer style="text-align: center; padding: 3rem 0;">
+  <div class="footer-box">
+    <a href="https://www.linkedin.com/in/lorena-pérez-hernando-733a2629b/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" />
+    </a>
+    <a href="https://github.com/LorenaPerezHernando" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" />
+    </a>
+    <a href="https://discord.com/users/1086262529271025714" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="40" />
+    </a>
+    <a href="mailto:lorenaperezhernando@gmail.com" target="_blank">
+      <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" width="40" />
+    </a>
+    <a href="https://lorenaperez.itch.io" target="_blank">
+      <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/refs/heads/main/logo%20itch.png" alt="Itch.io" width="40" />
+    </a>
+  </div>
+ </footer>
+</body>
+</html>
