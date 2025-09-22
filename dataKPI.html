@@ -77,6 +77,13 @@
       margin: 1.5rem 0;
       border: 1px solid #333;
     }
+    .example-img {
+  display: block;
+  margin: 1rem auto 0;
+  max-width:60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 
     .footer-box {
       background-color: #f0f0f0;
@@ -103,55 +110,59 @@
 </head>
 <body>
   <header>
-    <h1>Data KPI en Unity</h1>
+    <h1>Data KPI in Unity</h1>
      <nav>
       <a href="index.html">All My Games</a>
       <a href="posts.html">Posts</a>
       <a href="sobremi.html">About Me</a>
     </nav>
-    <p>Cómo medir, analizar y mejorar tu juego con indicadores clave.</p>
+    <p>How to Measure, Analyze, and Improve Your Game with Key Indicators</p>
   </header>
 
   <section>
-    <h2>¿Para qué sirven los Data KPI en Unity?</h2>
+    <h2>What are Data KPIs used for in Unity?</h2>
     <p>
-      Los Data KPI (<em>Key Performance Indicators</em>) en Unity se usan para recoger y analizar datos dentro de un juego, permitiendo entender mejor cómo juegan los usuarios y tomar decisiones de diseño o negocio.
+      Data KPIs (<em>Key Performance Indicators</em>) in Unity are used to collect and analyze data within a game, allowing developers to better understand how players interact with it and to make informed design or business decisions.
+     
     </p>
 
-    <h2>Ejemplos de uso en un videojuego</h2>
+    <h2>Examples of use in videogames </h2>
     <ul>
-      <li><strong>Progresión:</strong> ver cuántos jugadores llegan a cierto nivel o cuántos descubren un <em>easter egg</em>.</li>
-      <li><strong>Monetización:</strong> analizar qué paquetes se compran más o cuántos jugadores hacen compras dentro del juego.</li>
-      <li><strong>Retención:</strong> medir cuánto tiempo pasan los jugadores en una sesión o cuántas veces se conectan a lo largo de la semana.</li>
-      <li><strong>Post-desarrollo:</strong> comprobar en qué dispositivos funciona bien el juego y en cuáles aparecen más errores.</li>
+      <li><strong>Progression:</strong> see how many players reach a certain level or discover a hidden <em>easter egg</em>.</li>
+      <li><strong>Monetizatión:</strong> nalyze which bundles are purchased the most or how many players make in-game purchases.</li>
+      <li><strong>Retentión:</strong> measure how long players stay in a session or how often they return throughout the week.</li>
+      <li><strong>Post-development:</strong> check on which devices the game runs smoothly and where more errors occur.</li>
     </ul>
 
-    <h2>Caso práctico en mis proyectos</h2>
+    <h2>Practical case in my proyects</h2>
     <div class="example-box">
       <p>
-        En un pequeño juego de recolectar objetos en un tiempo límite, uso un sistema de Data KPI para decidir qué final mostrar según la cantidad de recolectables recogidos.
+        In a small game where players collect objects within a time limit, I use a Data KPI system to decide which ending to show based on the number of collectibles gathered.
       </p>
       <p>
-        Cada recolectable tiene un script con un <code>Enum KPIType</code> y un método <code>Recolectar()</code>.  
-        Al recolectar, este método comunica al <strong>Data KPI Manager</strong> (centralizado en el <code>GameController</code>) que incremente el contador correspondiente.
+        Each collectible has a script with an Enum KPIType and a Collect() method. When collected, this method communicates with the Data KPI Manager (centralized in the GameController) to increase the corresponding counter.
       </p>
       <p>
-        Finalmente, el GameController evalúa los resultados y activa un final u otro.
+        Finally, the GameController evaluates the results and activates one ending or another.
       </p>
+       <img src="DataKPIGame.png" alt="Data KPI Collectibles Example" class="example-img">
+      <img src="DataKPiRecolectables.png" alt="Data KPI Collectibles Example" class="example-img">
+      <img src="DataKPIScripts.png" alt="Data KPI Collectibles Example" class="example-img">
     </div>
 
     <div class="example-box">
       <p>
-        En otro proyecto con cañones que disparan balas y generan explosiones, medí mediante KPI cuántas instancias se estaban creando en pantalla. Esto me ayudó no solo a optimizar rendimiento, sino también a entender cómo de caótico se volvía el gameplay en distintos niveles de dificultad.
-      </p>
+        In another project with cannons shooting bullets and generating explosions, I measured through KPIs how many instances were being created on screen. This helped me not only optimize performance but also understand how chaotic the gameplay became at different difficulty levels.
+       </p>
+        <img src="DataKPIGame.png" alt="Data KPI Collectibles Example" class="example-img"style="display:block; margin:1rem auto 0; max-width:80%; border-radius:8px; >
     </div>
 
-    <h2>¿Qué aportan realmente los KPI?</h2>
+    <h2>What do KPIs really bring?</h2>
     <ul>
-      <li><strong>Toman el pulso al juego:</strong> permiten validar decisiones de diseño con datos reales.</li>
-      <li><strong>Ayudan a equilibrar:</strong> muestran si un reto es demasiado fácil/difícil o si una mecánica no se está usando.</li>
-      <li><strong>Guían la optimización:</strong> detectan problemas de rendimiento o exceso de instanciación.</li>
-      <li><strong>Conectan con negocio:</strong> monetización y retención se pueden medir de forma clara.</li>
+      <li><strong>Take the game’s pulse:</strong> validate design decisions with real data.</li>
+      <li><strong>Help balance the game:</strong>show if a challenge is too easy/difficult or if a mechanic is underused.</li>
+      <li><strong>Guide optimization:</strong> detect performance issues or excessive instantiation.</li>
+      <li><strong>Conect to business:</strong> monetization and retention can be measured clearly.</li>
     </ul>
   </section>
 
