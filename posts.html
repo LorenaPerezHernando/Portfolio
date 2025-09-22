@@ -28,7 +28,7 @@
       color: #ccc;
     }
 
-    nav {
+    .main-nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -36,7 +36,7 @@
       margin: 2rem 0;
     }
 
-    nav a {
+    .main-nav a {
       background-color: #00ffcc;
       color: #000;
       text-decoration: none;
@@ -46,7 +46,30 @@
       transition: background 0.3s;
     }
 
-    nav a:hover {
+    .main-nav a:hover {
+      background-color: #00ccb3;
+    }
+    
+    .sub-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 0 0 2rem;
+    }
+
+    .sub-nav a {
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .sub-nav a:hover {
       background-color: #00ccb3;
     }
 
@@ -118,7 +141,12 @@
       <a href="posts.html">Posts</a>
       <a href="sobremi.html">About Me</a>
     </nav>
-    <h2></h2>
+    <h2>Case studies</h2>
+    <nav class="sub-nav">
+      <a href="dataKPI.html">Data KPI</a>
+      <a href="libros.html">Books</a>
+    </nav>
+
   </header>
 
   <section id="posts">
