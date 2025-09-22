@@ -5,104 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lorena's Game World</title>
   <style>
+    :root{
+      --bg1:#1c1c2b; --bg2:#12121c; --accent:#00ffcc; --accent-2:#00ccb3; --text:#f0f0f0; --muted:#ccc;
+    }
+
     body {
-      background: linear-gradient(to right, #1c1c2b, #12121c);
-      color: #f0f0f0;
+      background: linear-gradient(to right, var(--bg1), var(--bg2));
+      color: var(--text);
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    header {
-      text-align: center;
-      padding: 5rem 2rem 3rem;
-    }
+    header { text-align: center; padding: 5rem 2rem 2rem; }
+    header h1 { font-size: 3rem; color: var(--accent); margin: 0 0 .5rem; }
+    header h2 { font-size: 1.5rem; color: var(--muted); margin: .75rem 0 0; }
 
-    header h1 {
-      font-size: 3rem;
-      color: #00ffcc;
-    }
-
-    header h2 {
-      font-size: 1.5rem;
-      color: #ccc;
-    }
-
+    /* ===== NAV PRINCIPAL: BOTONES ===== */
     .main-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem 0;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1rem; margin: 2rem 0 1rem;
     }
-
-    .main-nav a {
-      background-color: #00ffcc;
-      color: #000;
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    
-    main-nav a:link,
+    .main-nav a,
+    .main-nav a:link,
     .main-nav a:visited {
-      background-color: #00ffcc;
+      background-color: var(--accent);
       color: #000;
       text-decoration: none;
       padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: background .2s ease;
     }
+    .main-nav a:hover { background-color: var(--accent-2); }
 
-    .main-nav a:hover {
-      background-color: #00ccb3;
-    }
-    
+    /* ===== NAV SECUNDARIO: ENLACES DE TEXTO ===== */
     .sub-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.8rem;
-      margin: 0 0 2rem;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.5rem; margin: .75rem 0 2rem;
     }
-
-    .sub-nav a {
-      background-color: #00ffcc;
-      color: #000;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
-    
+    .sub-nav a,
     .sub-nav a:link,
     .sub-nav a:visited {
-      background-color: #00ffcc;
-      color: #000;
+      color: var(--accent);
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-
-    .sub-nav a:hover {
-      background-color: #00ccb3;
+      font-size: 1rem;
     }
-      .header-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: .5rem;
+    .sub-nav a:hover { text-decoration: underline; }
 
-    section {
-      padding: 3rem 1rem;
-    }
+    section { padding: 3rem 1rem; }
 
     .game-panel {
       background-color: #1f1f2e;
@@ -114,98 +66,90 @@
       text-align: center;
       box-shadow: 0 0 20px rgba(0,255,204,0.1);
     }
+    .game-panel h2 { margin-bottom: 0.5rem; color: var(--accent); }
+    .game-panel p { color: var(--muted); margin-bottom: 1rem; }
+    .game-panel img { width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 1rem; }
 
-    .game-panel h2 {
-      margin-bottom: 0.5rem;
-      color: #00ffcc;
-    }
-
-    .game-panel p {
-      color: #ccc;
-      margin-bottom: 1rem;
-    }
-
-    .game-panel img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .game-panel a {
+    .game-panel a,
+    .game-panel a:link,
+    .game-panel a:visited {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1.2rem;
-      background-color: #00ffcc;
+      background-color: var(--accent);
       color: #000;
       border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      transition: background .2s ease;
     }
+    .game-panel a:hover { background-color: var(--accent-2); }
+
+    footer { text-align: center; padding: 3rem 0; }
     .footer-box {
-  background-color: #f0f0f0;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  display: inline-flex;
-  justify-content: center;
-  gap: 2rem;
-  align-items: center;
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
-}
-.footer-box a img {
-  transition: transform 0.2s ease;
-}
-.footer-box a:hover img {
-  transform: scale(1.1);
-}
+      background-color: #f0f0f0;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      display: inline-flex;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+    .footer-box a img { transition: transform 0.2s ease; }
+    .footer-box a:hover img { transform: scale(1.1); }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to my Posts</h1>    
-    <nav>
+    <h1>Posts</h1>
+
+    <!-- Fila 1: botones -->
+    <nav class="main-nav">
       <a href="index.html">All My Games</a>
       <a href="posts.html">Posts</a>
       <a href="sobremi.html">About Me</a>
     </nav>
+
     <h2>Case studies</h2>
+
+    <!-- Fila 2: enlaces de texto -->
     <nav class="sub-nav">
       <a href="dataKPI.html">Data KPI</a>
       <a href="libros.html">Books</a>
     </nav>
-
   </header>
 
   <section id="posts">
     <div class="game-panel">
-      <h2> Data KPI  </h2>
+      <h2>Data KPI</h2>
       <p>Case Studies: Data KPI (Key Performance Indicators)</p>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-      <img src="DataKPIGame.png" alt="Data KPI Game" style="max-width: 50%; border-radius: 10px;"/>
-      <a href="dataKPI.html">DATA KPI</a>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <img src="DataKPIGame.png" alt="Data KPI Game"/>
+        <a href="dataKPI.html">DATA KPI</a>
+      </div>
     </div>
-   </div>
-
   </section>
 
- <footer style="text-align: center; padding: 3rem 0;">
-  <div class="footer-box">
-    <a href="https://www.linkedin.com/in/lorena-pérez-hernando-733a2629b/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" />
-    </a>
-    <a href="https://github.com/LorenaPerezHernando" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" />
-    </a>
-    <a href="https://discord.com/users/1086262529271025714" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="40" />
-    </a>
-    <a href="mailto:lorenaperezhernando@gmail.com" target="_blank">
-      <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" width="40" />
-    </a>
-    <a href="https://lorenaperez.itch.io" target="_blank">
-      <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/refs/heads/main/logo%20itch.png" alt="Itch.io" width="40" />
-    </a>
-  </div>
- </footer>
+  <footer>
+    <div class="footer-box">
+      <a href="https://www.linkedin.com/in/lorena-pérez-hernando-733a2629b/" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" />
+      </a>
+      <a href="https://github.com/LorenaPerezHernando" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" />
+      </a>
+      <a href="https://discord.com/users/1086262529271025714" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="40" />
+      </a>
+      <a href="mailto:lorenaperezhernando@gmail.com">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" width="40" />
+      </a>
+      <a href="https://lorenaperez.itch.io" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/refs/heads/main/logo%20itch.png" alt="Itch.io" width="40" />
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
+
