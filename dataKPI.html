@@ -29,6 +29,28 @@
       font-size: 1.2rem;
     }
 
+     nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    nav a {
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #00ccb3;
+    }
+
     section {
       max-width: 900px;
       margin: auto;
@@ -82,6 +104,11 @@
 <body>
   <header>
     <h1>Data KPI en Unity</h1>
+     <nav>
+      <a href="index.html">All My Games</a>
+      <a href="posts.html">Posts</a>
+      <a href="sobremi.html">About Me</a>
+    </nav>
     <p>Cómo medir, analizar y mejorar tu juego con indicadores clave.</p>
   </header>
 
