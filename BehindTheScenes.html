@@ -43,9 +43,13 @@
     .main-nav a:hover{ background:var(--accent-2); }
 
     /* NAV secundario (botones pequeños) */
+    
     .sub-nav{
-      display:flex; flex-wrap:wrap; justify-content:center;
-      gap:.8rem; margin:.75rem 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0 3rem;
     }
     .sub-nav a,
     .sub-nav a:link,
@@ -53,13 +57,14 @@
       background:var(--accent);
       color:#000;
       text-decoration:none;
-      padding:.5rem 1rem;
+      padding:.6rem 1.2rem;
       border-radius:6px;
       font-weight:600;
       font-size:.95rem;
-      transition:background .2s ease;
+      text-align:center;
+      transition:background .2s ease, transform .2s ease;
     }
-    .sub-nav a:hover{ background:var(--accent-2); }
+    .sub-nav a:hover{ background:var(--accent-2); transform:scale(1.05); }
 
     /* Contenido */
     section{ padding:3rem 1rem; }
@@ -95,7 +100,7 @@
     }
     .btn:hover,
     .game-panel a:hover{ background:var(--accent-2); }
-
+    
     /* Footer */
     footer{ text-align:center; padding:3rem 0; }
     .footer-box{
@@ -132,6 +137,8 @@
       <a href="DataAndPersistence.html">Data and Persistance</a>
       <a href="DevelopmentTools.html">Development Tools</a>
       <a href="Optimization.html">Optimization</a>
+       <a href="GameDesignCaseStudies.html">Game Design and Case Studies</a>
+      <a href="Curiosities.html">Curiosities</a>
       <a href="Programming.html">Programming</a>
       <a href="books.html">Books</a>
     </nav>
