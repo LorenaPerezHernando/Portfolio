@@ -147,13 +147,71 @@
   <section id="posts">
 
 <div class="game-panel">
-      <h2>Data KPI</h2>
-      <p>Case Studies: Data KPI (Key Performance Indicators)</p>
-      <img src="DataKPIGame.png" alt="Data KPI Game">
-      <a class="btn" href="dataKPI.html">DATA KPI</a>
-      <nav> 
-        <a href="https://github.com/LorenaPerezHernando/Data-KPI-Save-System">REPOSITORY</a>
-      </nav>
+      <h1> whisper of the Nexus </h1>
+      <h2>Case study</h2>
+      <p> Fue mi primer proyecto grande (demo desarrollada en <strong>2 meses</strong>).
+      Ambientado en un mundo sumido en la oscuridad, el jugador debe liberar cada pueblo
+      ayudando a los aldeanos a recuperar la realidad.
+      <br><br>
+      La demo actual se centra en el <strong>primer pueblo completamente funcional</strong>,
+      introduciendo la mecánica de ataque, con ayuda ocasional de un NPC, varios puzles
+      ambientales y un <strong>boss final</strong>.
+      </p>
+  
+     <h2>Arquitectura</h2>
+    <p>
+      El diseño arquitectónico se centró en ser <strong>escalable y modular</strong>, con un 
+      <strong>GameController</strong> como núcleo que centraliza toda la lógica y evita dependencias directas entre módulos.
+      Permite agregar o quitar sistemas sin comprometer la funcionalidad global.
+    </p>
+    <p><strong>Gestiona:</strong> estados de juego (diálogo, puzzles, eventos globales), coordinación entre UI y gameplay, y cambios de input según contexto.</p>
+
+  <h3>Sistemas principales</h3>
+    <ul>
+      <li><strong>Interaction System</strong> – Raycast + interfaz IInteractable + InteractableInfo (editable desde Inspector).  
+        <em>Ventajas:</em> desacoplado, extensible sin añadir código, compatible con mando y teclado.</li>
+
+      <li><strong>Diálogos</strong> – Dialogue Manager + Scriptable Objects.  
+        <em>Ventajas:</em> UI adaptativa, triggers y eventos durante el diálogo, opciones de progreso.</li>
+
+      <li><strong>Puzzles</strong> – Script independiente con comunicación por eventos.  
+        <em>Ventajas:</em> lógica clara, aislada y fácil de mantener.</li>
+
+      <li><strong>Inventario</strong> – Interactuables con SO propio, sin necesidad de expandir código.</li>
+
+      <li><strong>Player Movement</strong> – Animaciones con Blend Tree, salto con curva de altura, poderes mediante scripts independientes.</li>
+
+      <li><strong>Sistema NPC</strong> – Modulares, sin duplicar scripts, capaces de iniciar eventos y diálogos.</li>
+
+      <li><strong>Sistema centralizado de eventos</strong> – Coordina UI, interacciones y lógica entre sistemas.</li>
+    </ul>
+
+    <h2>Mecánicas principales</h2>
+    <ul>
+      <li>Exploración y descubrimiento</li>
+      <li>Interacción con objetos/NPC (IInteractable)</li>
+      <li>Puzles ambientales</li>
+      <li>Recolección de flores / recursos</li>
+      <li>Misiones narrativas</li>
+      <li>Combate ligero</li>
+      <li>Sistema narrativo de memoria/olvido del personaje</li>
+    </ul>
+
+    <h2>Código y buenas prácticas</h2>
+    <ul>
+      <li>Programación modular y separación de responsabilidades</li>
+      <li>Uso de Scriptable Objects como base de datos ligera</li>
+      <li>Eventos para desacoplar módulos</li>
+      <li>Diccionarios para lookup (interacciones, items, estados)</li>
+      <li>Estructura clara de carpetas</li>
+    </ul>
+
+       <h2>Enlaces</h2>
+    <nav>
+      <a class="btn" href="https://lorepodgames.itch.io/whispers-of-the-nexus" target="_blank" rel="noopener">PLAY DEMO</a>
+      <a class="btn" href="https://github.com/LorenaPerezHernando/Magic-Kingdom-3D" target="_blank" rel="noopener">REPOSITORY</a>
+      <a class="btn" href="https://www.canva.com/design/DAGx0-_RtOg/dn20Bu-VQsXmASs8HNj-fw/view?utm_content=DAGx0-_RtOg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd8cc70d1dc" target="_blank" rel="noopener">DOSSIER</a>
+    </nav>
     </div>
    
   </section>
