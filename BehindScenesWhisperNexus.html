@@ -167,71 +167,71 @@
 <div class="game-panel">
       <h1>Whisper of the Nexus</h1>
       <h2>Case study</h2>
-      <p> Fue mi primer proyecto grande (demo desarrollada en <strong>2 meses</strong>).
-      Ambientado en un mundo sumido en la oscuridad, el jugador debe liberar cada pueblo
-      ayudando a los aldeanos a recuperar la realidad.
+      <p> It was my first large-scale project (demo developed in 2 months).
+        Set in a world engulfed by darkness, the player must free each village by helping its inhabitants return to reality.
       <br><br>
-      La demo actual se centra en el <strong>primer pueblo completamente funcional</strong>,
-      introduciendo la mecánica de ataque, con ayuda ocasional de un NPC, varios puzles
-      ambientales y un <strong>boss final</strong>.
+      The current demo focuses on the <strong>first fully functional village</strong>,
+      introducing the attack mechanic, occasional support from an NPC, several environmental puzzles, 
+        and a final boss encounter. <strong>final boss encounter</strong>.
       </p>
   
      <h2>Arquitectura</h2>
     <p>
-      El diseño arquitectónico se centró en ser <strong>escalable y modular</strong>, con un 
-      <strong>GameController</strong> como núcleo que centraliza toda la lógica y evita dependencias directas entre módulos.
-      Permite agregar o quitar sistemas sin comprometer la funcionalidad global.
+      The architectural design was focused on being<strong>scalable and modular</strong>, using a
+      <strong>GameController</strong> as the central core that manages global logic and prevents direct dependencies between systems.
+      It allows adding or removing modules without compromising the overall functionality of the game.
     </p>
-    <p><strong>Gestiona:</strong> estados de juego (diálogo, puzzles, eventos globales), coordinación entre UI y gameplay, y cambios de input según contexto.</p>
+    <p><strong>Manages</strong> egame states (dialogue, puzzles, global events), coordination between UI and gameplay, 
+      and input switching depending on context.</p>
 
-  <h2>Sistemas principales</h2>
+  <h2>Core Systems</h2>
     <ul>
-      <li><strong>Interaction System</strong> – Raycast + interfaz IInteractable + InteractableInfo (editable desde Inspector). 
+      <li><strong>Interaction System</strong> – Raycast-based + IInteractable interface + InteractableInfo (editable via Inspector).
         <br><span style="margin-left:0.8rem;">
-        <em>Ventajas:</em> desacoplado, extensible sin añadir código, compatible con mando y teclado.</li>
+        <em>Advantages:</em>decoupled, extendable without additional code, compatible with both controller and keyboard.</li>
 
-      <li><strong>Diálogos</strong> – Dialogue Manager + Scriptable Objects.  
+      <li><strong>Dialogue System</strong> – Dialogue Manager + Scriptable Objects.  
         <br><span style="margin-left:0.8rem;">
-        <em>Ventajas:</em> UI adaptativa, triggers y eventos durante el diálogo, opciones de progreso.</li>
+        <em>Advantages:</em> Adaptive UI, supports triggers and in-dialogue events, progression options.</li>
 
-      <li><strong>Puzzles</strong> – Script independiente con comunicación por eventos.
+      <li><strong>Puzzle System</strong> – Independent script communicating through events.
         <br><span style="margin-left:0.8rem;">
-        <em>Ventajas:</em> lógica clara, aislada y fácil de mantener.</li>
+        <em>Advantages:</em> Clear logic, isolated, easy to maintain.</li>
 
-      <li><strong>Inventario</strong> – Interactuables con SO propio
+      <li><strong>Inventory System</strong> – Interactables using their own Scriptable Object.
         <br><span style="margin-left:0.8rem;">
-        <em>Ventajas:</em> sin necesidad de expandir código.</li>
+        <em>Advantages:</em> no need to expand code when adding new items.</li>
 
-      <li><strong>Player Movement</strong> – Animaciones con Blend Tree, salto con curva de altura, poderes mediante scripts independientes.</li>
+      <li><strong>Player Movement</strong> – Blend Tree–based animations, jump with height curve, abilities handled by independent scripts.</li>
 
-      <li><strong>Sistema NPC</strong> –
+      <li><strong>NPC System</strong> –
         <br><span style="margin-left:0.8rem;">
-        <em>Ventajas:</em> Modulares, sin duplicar scripts, capaces de iniciar eventos y diálogos.</li>
+        <em>Advantages</em> Modular, no script duplication, capable of triggering events and dialogues.</li>
 
-      <li><strong>Sistema centralizado de eventos</strong> – Coordina UI, interacciones y lógica entre sistemas.</li>
+      <li><strong>Centralized Event System</strong> – Coordinates UI, interactions, and logic between systems.</li>
     </ul>
 
-    <h2>Mecánicas principales</h2>
+    <h2>Key Mecanics</h2>
     <ul>
-      <li>Exploración y descubrimiento</li>
-      <li>Interacción con objetos/NPC (IInteractable)</li>
-      <li>Puzles ambientales</li>
-      <li>Recolección de flores / recursos</li>
-      <li>Misiones narrativas</li>
-      <li>Combate ligero</li>
-      <li>Sistema narrativo de memoria/olvido del personaje</li>
+      <li>Exploration and discovery</li>
+      <li>Interaction with objects/NPCs (via IInteractable)</li>
+      <li>Environmental puzzles</li>
+      <li>Resource/flower collection</li>
+      <li>Narrative side quests</li>
+      <li>Light combat system</li>
+      <li>Memory/forgetfulness system as a narrative core</li>
     </ul>
 
-    <h2>Código y buenas prácticas</h2>
+    <h2>Code & Best Practices</h2>
     <ul>
-      <li>Programación modular y separación de responsabilidades</li>
-      <li>Uso de Scriptable Objects como base de datos ligera</li>
-      <li>Eventos para desacoplar módulos</li>
-      <li>Diccionarios para lookup (interacciones, items, estados)</li>
-      <li>Estructura clara de carpetas</li>
+      <li>Modular programming and responsibility separation</li>
+      <li>Use of Scriptable Objects as lightweight data containers</li>
+      <li>Event-driven communication to decouple systems</li>
+      <li>Dictionaries for lookup (interactions, items, states)</li>
+      <li>Clean and organized folder structure/li>
     </ul>
 
-       <h2>Enlaces</h2>
+       <h2>Links</h2>
     <nav>
       <a class="btn" href="https://lorepodgames.itch.io/whispers-of-the-nexus" target="_blank" rel="noopener">PLAY DEMO</a>
       <a class="btn" href="https://github.com/LorenaPerezHernando/Magic-Kingdom-3D" target="_blank" rel="noopener">REPOSITORY</a>
