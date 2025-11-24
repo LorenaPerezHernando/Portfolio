@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorena's Game World — Posts</title>
+  <style>
+    :root{
+      --bg1:#1c1c2b; --bg2:#12121c;
+      --accent:#00ffcc; --accent-2:#00ccb3;
+      --text:#f0f0f0; --muted:#cccccc;
+      --card:#1f1f2e; --card-border:#444;
+    }
+
+    /* Base */
+    body{
+      background: linear-gradient(to right, var(--bg1), var(--bg2));
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin:0;
+    }
+
+    header{ text-align:center; padding:5rem 2rem 2rem; }
+    header h1{ margin:0 0 .5rem; font-size:3rem; color:var(--accent); }
+    header h2{ margin:.5rem 0 0; font-size:1.5rem; color:var(--muted); }
+
+    /* NAV principal (botones grandes) */
+    .main-nav{
+      display:flex; flex-wrap:wrap; justify-content:center;
+      gap:1rem; margin:2rem 0 1rem;
+    }
+    .main-nav a,
+    .main-nav a:link,
+    .main-nav a:visited{
+      background:var(--accent);
+      color:#000;
+      text-decoration:none;
+      padding:.8rem 1.5rem;
+      border-radius:6px;
+      font-weight:700;
+      transition:background .2s ease;
+    }
+    .main-nav a:hover{ background:var(--accent-2); }
+
+    /* NAV secundario (botones pequeños) */
+    
+    .sub-nav{
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0 3rem;
+    }
+    .sub-nav a,
+    .sub-nav a:link,
+    .sub-nav a:visited{
+      background:var(--accent);
+      color:#000;
+      text-decoration:none;
+      padding:.6rem 1.2rem;
+      border-radius:6px;
+      font-weight:600;
+      font-size:.95rem;
+      text-align:center;
+      transition:background .2s ease, transform .2s ease;
+    }
+    .sub-nav a:hover{ background:var(--accent-2); transform:scale(1.05); }
+
+    /* Contenido */
+    section{ padding:3rem 1rem; }
+    #posts{ max-width:920px; margin:0 auto; }
+
+    .game-panel{
+      background:var(--card);
+      border:1px solid var(--card-border);
+      border-radius:12px;
+      padding:2rem;
+      margin:2rem auto;
+      max-width:820px;
+      text-align:center;
+      box-shadow:0 0 20px rgba(0,255,204,.10);
+    }
+    .game-panel h2{ margin:.2rem 0 .6rem; color:var(--accent); }
+    .game-panel p{ margin:0 0 1rem; color:var(--muted); }
+    .game-panel img{ width:100%; max-width:720px; border-radius:10px; margin:0 auto 1rem; display:block; }
+
+    .btn,
+    .btn:link,
+    .btn:visited,
+    .game-panel a,
+    .game-panel a:link,
+    .game-panel a:visited{
+      display:inline-block;
+      background:var(--accent);
+      color:#000; text-decoration:none;
+      padding:.55rem 1.2rem;
+      border-radius:6px;
+      font-weight:700;
+      transition:background .2s ease;
+    }
+    .btn:hover,
+    .game-panel a:hover{ background:var(--accent-2); }
+    
+    /* Footer */
+    footer{ text-align:center; padding:3rem 0; }
+    .footer-box{
+      background:#f0f0f0;
+      padding:1.5rem 2rem;
+      border-radius:12px;
+      display:inline-flex;
+      justify-content:center;
+      gap:2rem;
+      align-items:center;
+      box-shadow:0 0 10px rgba(0,255,204,.2);
+    }
+    .footer-box a img{ transition:transform .2s ease; }
+    .footer-box a:hover img{ transform:scale(1.1); }
+
+    /* Nuevo: listas dentro de game-panel alineadas a la izquierda */
+    .game-panel ul{
+      text-align:left;
+      margin-left:1.5rem;
+      padding-left:0.8rem;
+    }
+
+    .game-panel li{
+      text-align:left;
+      margin-bottom:0.6rem;
+    }
+
+    .game-panel li em{
+       display:inline;  
+       margin-left:0.3rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Posts</h1>
+
+    <!-- Fila 1: botones grandes -->
+    <nav class="main-nav">
+      <a href="index.html">All My Games</a>
+      <a href="posts.html">Posts</a>
+      <a href="sobremi.html">About Me</a>
+    </nav>
+
+    <h2>Index</h2>
+
+    <!-- Fila 2: botones pequeños -->
+    <nav class="sub-nav">
+      <a href="BehindTheScenes.html">Behind the scenes</a>
+      <a href="ArchitectureAndOrganization.html">Architecture and Organization</a>
+      <a href="DataAndPersistence.html">Data and Persistance</a>
+      <a href="DevelopmentTools.html">Development Tools</a>
+      <a href="Optimization.html">Optimization</a>
+       <a href="GameDesignCaseStudies.html">Game Design and Case Studies</a>
+      <a href="Curiosities.html">Curiosities</a>
+      <a href="Programming.html">Programming</a>
+      <a href="books.html">Books</a>
+    </nav>
+  </header>
+
+  <section id="posts">
+
+<div class="game-panel">
+      <h1>Whisper of the Nexus</h1>
+      <h2>Case study</h2>
+      <p> It was my first large-scale project (demo developed in 2 months).
+        Set in a world engulfed by darkness, the player must free each village by helping its inhabitants return to reality.
+      <br><br>
+      The current demo focuses on the <strong>first fully functional village</strong>,
+      introducing the attack mechanic, occasional support from an NPC, several environmental puzzles, 
+        and a final boss encounter. <strong>final boss encounter</strong>.
+      </p>
+  
+     <h2>Arquitectura</h2>
+    <p>
+      The architectural design was focused on being<strong>scalable and modular</strong>, using a
+      <strong>GameController</strong> as the central core that manages global logic and prevents direct dependencies between systems.
+      It allows adding or removing modules without compromising the overall functionality of the game.
+    </p>
+    <p><strong>Manages</strong> egame states (dialogue, puzzles, global events), coordination between UI and gameplay, 
+      and input switching depending on context.</p>
+
+  <h2>Core Systems</h2>
+    <ul>
+      <li><strong>Interaction System</strong> – Raycast-based + IInteractable interface + InteractableInfo (editable via Inspector).
+        <br><span style="margin-left:0.8rem;">
+        <em>Advantages:</em>decoupled, extendable without additional code, compatible with both controller and keyboard.</li>
+
+      <li><strong>Dialogue System</strong> – Dialogue Manager + Scriptable Objects.  
+        <br><span style="margin-left:0.8rem;">
+        <em>Advantages:</em> Adaptive UI, supports triggers and in-dialogue events, progression options.</li>
+
+      <li><strong>Puzzle System</strong> – Independent script communicating through events.
+        <br><span style="margin-left:0.8rem;">
+        <em>Advantages:</em> Clear logic, isolated, easy to maintain.</li>
+
+      <li><strong>Inventory System</strong> – Interactables using their own Scriptable Object.
+        <br><span style="margin-left:0.8rem;">
+        <em>Advantages:</em> no need to expand code when adding new items.</li>
+
+      <li><strong>Player Movement</strong> – Blend Tree–based animations, jump with height curve, abilities handled by independent scripts.</li>
+
+      <li><strong>NPC System</strong> –
+        <br><span style="margin-left:0.8rem;">
+        <em>Advantages</em> Modular, no script duplication, capable of triggering events and dialogues.</li>
+
+      <li><strong>Centralized Event System</strong> – Coordinates UI, interactions, and logic between systems.</li>
+    </ul>
+
+    <h2>Key Mecanics</h2>
+    <ul>
+      <li>Exploration and discovery</li>
+      <li>Interaction with objects/NPCs (via IInteractable)</li>
+      <li>Environmental puzzles</li>
+      <li>Resource/flower collection</li>
+      <li>Narrative side quests</li>
+      <li>Light combat system</li>
+      <li>Memory/forgetfulness system as a narrative core</li>
+    </ul>
+
+    <h2>Code & Best Practices</h2>
+    <ul>
+      <li>Modular programming and responsibility separation</li>
+      <li>Use of Scriptable Objects as lightweight data containers</li>
+      <li>Event-driven communication to decouple systems</li>
+      <li>Dictionaries for lookup (interactions, items, states)</li>
+      <li>Clean and organized folder structure/li>
+    </ul>
+
+       <h2>Links</h2>
+    <nav>
+      <a class="btn" href="https://lorepodgames.itch.io/whispers-of-the-nexus" target="_blank" rel="noopener">PLAY DEMO</a>
+      <a class="btn" href="https://github.com/LorenaPerezHernando/Magic-Kingdom-3D" target="_blank" rel="noopener">REPOSITORY</a>
+      <a class="btn" href="https://www.canva.com/design/DAGx0-_RtOg/dn20Bu-VQsXmASs8HNj-fw/view?utm_content=DAGx0-_RtOg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd8cc70d1dc" target="_blank" rel="noopener">DOSSIER</a>
+    </nav>
+    </div>
+   
+  </section>
+
+  <footer>
+    <div class="footer-box">
+      <a href="https://www.linkedin.com/in/lorena-pérez-hernando-733a2629b/" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" />
+      </a>
+      <a href="https://github.com/LorenaPerezHernando" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" />
+      </a>
+      <a href="https://discord.com/users/1086262529271025714" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="40" />
+      </a>
+      <a href="mailto:lorenaperezhernando@gmail.com">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" width="40" />
+      </a>
+      <a href="https://lorenaperez.itch.io" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LorenaPerezHernando/Portfolio/refs/heads/main/logo%20itch.png" alt="Itch.io" width="40" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
