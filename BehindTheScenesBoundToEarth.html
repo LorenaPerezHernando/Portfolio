@@ -165,15 +165,11 @@
   <section id="posts">
 
 <div class="game-panel">
-      <h1>Whisper of the Nexus</h1>
+      <h1>Bound to Earth</h1>
       <h2>Case study</h2>
-      <p> It was my first large-scale project (demo developed in 2 months).
-        Set in a world engulfed by darkness, the player must free each village by helping its inhabitants return to reality.
-      <br><br>
-      The current demo focuses on the <strong>first fully functional village</strong>,
-      introducing the attack mechanic, occasional support from an NPC, several environmental puzzles, 
-        and a final boss encounter. <strong>final boss encounter</strong>.
+      <p> Bound to Earth is a 2D platformer where you control a ghost traveling through different places from its past to unlock memories and decide if he is a good soul or a bad one.
       </p>
+    
   
      <h2>Arquitectura</h2>
     <p>
@@ -181,45 +177,43 @@
       <strong>GameController</strong> as the central core that manages global logic and prevents direct dependencies between systems.
       It allows adding or removing modules without compromising the overall functionality of the game.
     </p>
-    <p><strong>Manages</strong> egame states (dialogue, puzzles, global events), coordination between UI and gameplay, 
-      and input switching depending on context.</p>
+    <p><strong>Manages</strong> level transitions, collectables and post effects, level progression, events and gameplay flow.</p>
 
   <h2>Core Systems</h2>
     <ul>
-      <li><strong>Interaction System</strong> – Raycast-based + IInteractable interface + InteractableInfo (editable via Inspector).
+      <li><strong>Interaction System</strong> – Inspired by previous 3D development experience: IInteractable interface with methods, the player uses Raycast to detect interactive objects. Each object implements
+        its own logic independently from the player.
         <br><span style="margin-left:0.8rem;">
-        <em>Advantages:</em>decoupled, extendable without additional code, compatible with both controller and keyboard.</li>
+        <em>Advantages:</em> This allows high extensibility, easily supporting new interaction types. And allowing for easier testing and tweaking</li>
 
-      <li><strong>Dialogue System</strong> – Dialogue Manager + Scriptable Objects.  
+      <li><strong>Player Architecture</strong> – 2D Character Controller was implemented with clear and separated logic:
+        Horizontal movement with smooth accelerations and decelerations. Jump using a custom curve with initial force and gravity.
+        </li>
+
+      <li><strong>Level Design</strong></strong> – IThe first level, although simple and quite linear, effectively introduces the core mechanics:
+movement, jumping, double jump, interaction, and “possession”.
+      </li>
+
+      <li><strong>Puzzle from collectibles </strong> – Each level contains hidden memories in the form of collectible fragments. These fragments
+are stored as Scriptable Objects, allowing each one to define its own data (visual icon, 
+text, lore and unlock conditions) without adding new code. 
         <br><span style="margin-left:0.8rem;">
-        <em>Advantages:</em> Adaptive UI, supports triggers and in-dialogue events, progression options.</li>
+        <em>Advantages:</em>ully data-driven system. New collectibles can be added by designers without modifying scripts. All collected fragments contribute to the “Memory Mosaic” 
+in the main hub — a puzzle that reveals the ghost’s past as players assemble pieces over multiple levels.
+      </li>
 
-      <li><strong>Puzzle System</strong> – Independent script communicating through events.
-        <br><span style="margin-left:0.8rem;">
-        <em>Advantages:</em> Clear logic, isolated, easy to maintain.</li>
-
-      <li><strong>Inventory System</strong> – Interactables using their own Scriptable Object.
-        <br><span style="margin-left:0.8rem;">
-        <em>Advantages:</em> no need to expand code when adding new items.</li>
-
-      <li><strong>Player Movement</strong> – Blend Tree–based animations, jump with height curve, abilities handled by independent scripts.</li>
-
-      <li><strong>NPC System</strong> –
-        <br><span style="margin-left:0.8rem;">
-        <em>Advantages</em> Modular, no script duplication, capable of triggering events and dialogues.</li>
-
-      <li><strong>Centralized Event System</strong> – Coordinates UI, interactions, and logic between systems.</li>
-    </ul>
-
-    <h2>Key Mecanics</h2>
+    <h2>Development Goals </h2>
+   <p>
+    The objective of the project was to produce a strong and self-contained vertical slice,
+    demonstrating proficiency in:
+    </p>
     <ul>
-      <li>Exploration and discovery</li>
-      <li>Interaction with objects/NPCs (via IInteractable)</li>
-      <li>Environmental puzzles</li>
-      <li>Resource/flower collection</li>
-      <li>Narrative side quests</li>
-      <li>Light combat system</li>
-      <li>Memory/forgetfulness system as a narrative core</li>
+      <li>Systems architecture</li>
+      <li>Modular interaction design</li>
+      <li>Art and animation integration</li>
+      <li>Level design and onboarding</li>
+      <li>Narrative flow and pacing</li>
+      <li>Clean, scalable and maintainable programming</li>
     </ul>
 
     <h2>Code & Best Practices</h2>
@@ -233,9 +227,9 @@
 
        <h2>Links</h2>
     <nav>
-      <a class="btn" href="https://lorepodgames.itch.io/whispers-of-the-nexus" target="_blank" rel="noopener">PLAY DEMO</a>
-      <a class="btn" href="https://github.com/LorenaPerezHernando/Magic-Kingdom-3D" target="_blank" rel="noopener">REPOSITORY</a>
-      <a class="btn" href="https://www.canva.com/design/DAGx0-_RtOg/dn20Bu-VQsXmASs8HNj-fw/view?utm_content=DAGx0-_RtOg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd8cc70d1dc" target="_blank" rel="noopener">DOSSIER</a>
+      <a class="btn" href="https://lorepodgames.itch.io/bound-to-earth" target="_blank" rel="noopener">PLAY DEMO</a>
+      <a class="btn" href="https://github.com/LorenaPerezHernando/The-Spirit-that-couldnt-fly/tree/main" target="_blank" rel="noopener">REPOSITORY</a>
+    
     </nav>
     </div>
    
